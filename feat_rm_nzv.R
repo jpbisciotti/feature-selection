@@ -25,7 +25,7 @@ feat_rm_nzv <- function(
     excessive_frequency_ratio && excessive_uniqueness_ratio
   }
   
-  df |> 
+  x |> 
     dplyr::select(-tidyselect::where(function(x) { 
       is.nzv(
         x = x, 
